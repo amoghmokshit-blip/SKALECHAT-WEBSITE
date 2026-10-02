@@ -6,6 +6,7 @@ import { Prose } from "@/components/prose";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "Privacy Policy",
   description: `How ${site.legalName} handles information on the SkaleChat platform.`,
 };

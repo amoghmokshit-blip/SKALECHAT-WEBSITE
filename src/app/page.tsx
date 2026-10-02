@@ -1,6 +1,7 @@
 import { Container } from "@/components/container";
 import { Button } from "@/components/button";
 import { SuperGroupPanel } from "@/components/super-group-panel";
+import { StoreBadges } from "@/components/store-badges";
 import { Reveal } from "@/components/reveal";
 
 const features = [
@@ -61,11 +62,15 @@ export default function Home() {
         <Container className="relative z-10 grid items-center gap-14 py-16 md:grid-cols-2 md:py-24">
           <div>
             <span className="rise rise-1 inline-flex items-center gap-2 rounded-full bg-accent-tint px-3 py-1 text-xs font-semibold text-accent-dark">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+              <span
+                className="pulse-dot h-1.5 w-1.5 rounded-full bg-accent"
+                aria-hidden
+              />
               Privacy-first · Built for intermediaries
             </span>
             <h1 className="rise rise-1 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl md:text-[3.4rem]">
-              Group chat without disintermediation.
+              Group chat without{" "}
+              <span className="gradient-text">disintermediation.</span>
             </h1>
             <p className="rise rise-2 mt-6 max-w-xl text-lg leading-8 text-muted">
               SkaleChat is a messaging app for the people who connect others —
@@ -79,12 +84,15 @@ export default function Home() {
                 Learn More
               </Button>
             </div>
-            <p className="rise rise-3 mt-6 text-sm text-faint">
+            <StoreBadges className="rise rise-4 mt-6" />
+            <p className="rise rise-4 mt-6 text-sm text-faint">
               End-to-end encrypted · India-first · Admins pay, members free
             </p>
           </div>
           <div className="rise rise-4 flex justify-center md:justify-end">
-            <SuperGroupPanel />
+            <div className="floaty">
+              <SuperGroupPanel />
+            </div>
           </div>
         </Container>
       </section>

@@ -5,6 +5,7 @@ import { Reveal } from "@/components/reveal";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About",
   description:
     "SkaleChat is built by SKALECHAT COMMUNICATIONS PRIVATE LIMITED — a company focused on private, intermediated communication.",

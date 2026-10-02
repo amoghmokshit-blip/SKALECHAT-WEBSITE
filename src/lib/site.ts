@@ -11,6 +11,9 @@ export const site = {
   phoneDisplay: "+91 98157 84080",
   website: "slaychatapp.com",
   websiteUrl: "https://slaychatapp.com",
+  // App store links — replace "#" with the real listing URLs once published.
+  appStoreUrl: "#",
+  playStoreUrl: "#",
   // Registered address was not provided; shown as a placeholder until supplied.
   address: "Registered office address — to be provided.",
 } as const;

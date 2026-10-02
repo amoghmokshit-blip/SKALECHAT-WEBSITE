@@ -7,6 +7,7 @@ import { Button } from "@/components/button";
 import { Reveal } from "@/components/reveal";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/product" },
   title: "Product",
   description:
     "The Super Group: private group communication built for intermediated conversations, where identities and contact details stay hidden.",

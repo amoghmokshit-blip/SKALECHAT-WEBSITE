@@ -5,6 +5,7 @@ import { Button } from "@/components/button";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: `Contact ${site.name} — email, phone and registered company details.`,
 };

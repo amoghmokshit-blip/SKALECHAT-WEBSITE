@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/page-header";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/company" },
   title: "Company",
   description: `Company information for ${site.legalName}.`,
 };

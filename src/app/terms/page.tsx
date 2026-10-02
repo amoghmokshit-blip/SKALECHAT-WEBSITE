@@ -6,6 +6,7 @@ import { Prose } from "@/components/prose";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "Terms & Conditions",
   description: `The terms that govern use of the SkaleChat platform, operated by ${site.legalName}.`,
 };
