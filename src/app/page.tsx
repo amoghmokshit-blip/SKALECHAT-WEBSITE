@@ -59,7 +59,7 @@ export default function Home() {
             }}
           />
         </div>
-        <Container className="relative z-10 grid items-center gap-14 py-16 md:grid-cols-2 md:py-24">
+        <Container className="relative z-10 grid grid-cols-1 items-center gap-14 py-16 md:grid-cols-2 md:py-24">
           <div>
             <span className="rise rise-1 inline-flex items-center gap-2 rounded-full bg-accent-tint px-3 py-1 text-xs font-semibold text-accent-dark">
               <span
@@ -68,7 +68,7 @@ export default function Home() {
               />
               Privacy-first · Built for intermediaries
             </span>
-            <h1 className="rise rise-1 mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-[-0.02em] text-ink sm:text-5xl md:text-[3.4rem]">
+            <h1 className="rise rise-1 mt-5 font-display text-[2rem] font-extrabold leading-[1.08] tracking-[-0.02em] text-ink [hyphens:auto] [overflow-wrap:break-word] sm:text-5xl sm:leading-[1.05] md:text-[3.4rem]">
               Group chat without{" "}
               <span className="gradient-text">disintermediation.</span>
             </h1>
@@ -89,10 +89,8 @@ export default function Home() {
               End-to-end encrypted · India-first · Admins pay, members free
             </p>
           </div>
-          <div className="rise rise-4 flex justify-center md:justify-end">
-            <div className="floaty">
-              <SuperGroupPanel />
-            </div>
+          <div className="rise rise-4 flex min-w-0 justify-center md:justify-end">
+            <SuperGroupPanel className="min-w-0" />
           </div>
         </Container>
       </section>

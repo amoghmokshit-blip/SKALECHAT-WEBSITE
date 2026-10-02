@@ -24,7 +24,7 @@ export default function ProductPage() {
 
       {/* Super Group concept */}
       <section>
-        <Container className="grid items-center gap-14 py-20 md:grid-cols-2 md:py-24">
+        <Container className="grid grid-cols-1 items-center gap-14 py-20 md:grid-cols-2 md:py-24">
           <Reveal className="max-w-xl">
             <h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
               The Super Group
@@ -49,8 +49,8 @@ export default function ProductPage() {
               </p>
             </div>
           </Reveal>
-          <Reveal delay={120} className="flex justify-center md:justify-end">
-            <SuperGroupPanel />
+          <Reveal delay={120} className="flex min-w-0 justify-center md:justify-end">
+            <SuperGroupPanel className="min-w-0" />
           </Reveal>
         </Container>
       </section>
