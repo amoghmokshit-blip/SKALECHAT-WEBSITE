@@ -1,0 +1,287 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-subtle: #f4f5f7;
+  --color-ink: #101012;
+  --color-muted: #5c6068;
+  --color-faint: #8b9099;
+  --color-line: #e5e6ea;
+
+  /* App signature indigo (brand / interactive / accents) */
+  --color-accent: #5360ec;
+  --color-accent-dark: #4552e4;
+  --color-accent-soft: #6f7afc;
+  --color-accent-tint: #eef0fe;
+
+  /* App signature lime (primary CTA) */
+  --color-lime: #e2fa61;
+  --color-lime-dark: #d3ee46;
+  --color-lime-ink: #1b1b1b;
+
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.rise {
+  opacity: 0;
+  animation: rise 0.7s cubic-bezier(0.22, 0.68, 0.24, 1) forwards;
+}
+.rise-1 {
+  animation-delay: 0.06s;
+}
+.rise-2 {
+  animation-delay: 0.14s;
+}
+.rise-3 {
+  animation-delay: 0.22s;
+}
+.rise-4 {
+  animation-delay: 0.3s;
+}
+
+/* Scroll-reveal (toggled by the Reveal component when in view) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 0.68, 0.24, 1),
+    transform 0.7s cubic-bezier(0.22, 0.68, 0.24, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Chat-bubble pop-in */
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.pop {
+  opacity: 0;
+  animation: pop-in 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+/* Typing indicator dots */
+@keyframes typing-bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.45;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+.typing-dot {
+  animation: typing-bounce 1.2s ease-in-out infinite;
+}
+
+/* Gentle idle float for the hero panel */
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+.floaty {
+  animation: floaty 7s ease-in-out infinite;
+}
+
+/* Logo: gentle idle breathe + soft pulsing glow */
+@keyframes logo-breathe {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-1.5px) rotate(-2deg);
+  }
+}
+.logo-breathe {
+  animation: logo-breathe 5.5s ease-in-out infinite;
+}
+@keyframes logo-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.12);
+  }
+}
+.logo-glow {
+  animation: logo-glow 4s ease-in-out infinite;
+}
+.logo-mark:hover .logo-glow {
+  opacity: 0.85;
+}
+
+/* Pulsing status dot (hero badge) */
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(83, 96, 236, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(83, 96, 236, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(83, 96, 236, 0);
+  }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-out infinite;
+}
+
+/* Animated gradient wordmark (hero emphasis) */
+@keyframes gradient-pan {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    var(--color-accent),
+    var(--color-accent-soft),
+    var(--color-accent-dark),
+    var(--color-accent)
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 6s ease-in-out infinite;
+}
+
+/* Underline sweep for emphasized links/words */
+@keyframes shimmer {
+  to {
+    background-position: 200% 0;
+  }
+}
+
+/* Ambient aurora glow (decorative background) */
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(7%, 9%) scale(1.15);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1.08);
+  }
+  50% {
+    transform: translate(-9%, -7%) scale(0.94);
+  }
+}
+.aurora {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(64px);
+  pointer-events: none;
+}
+.aurora-a {
+  animation: aurora-a 16s ease-in-out infinite;
+}
+.aurora-b {
+  animation: aurora-b 22s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    opacity: 1;
+    animation: none;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .pop,
+  .typing-dot,
+  .floaty,
+  .aurora-a,
+  .aurora-b,
+  .logo-breathe,
+  .logo-glow,
+  .pulse-dot,
+  .gradient-text {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .gradient-text {
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    background: none;
+    color: var(--color-accent-dark);
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
