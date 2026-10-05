@@ -6,7 +6,7 @@ export const site = {
     "SkaleChat is a private group messaging platform for intermediaries. Parties communicate while their contact information stays hidden — only the admin sees real identities.",
   cin: "U46900HR2025PTC129801",
   companyType: "Private Limited Company",
-  email: "admin@slaychatapp.com",
+  email: "support@skalechat.com",
   phone: "9815784080",
   phoneDisplay: "+91 98157 84080",
   website: "slaychatapp.com",
