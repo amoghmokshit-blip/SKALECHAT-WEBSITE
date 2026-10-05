@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: `How ${site.legalName} handles personal data on the SkaleChat platform.`,
 };
 
-const grievanceEmail = "nitin@skalechat.com";
+const grievanceEmail = "support@skalechat.com";
 
 export default function PrivacyPage() {
   return (

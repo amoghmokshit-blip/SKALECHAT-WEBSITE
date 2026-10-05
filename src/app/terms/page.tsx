@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: `The terms that govern use of the SkaleChat platform, operated by ${site.legalName}.`,
 };
 
-const grievanceEmail = "nitin@skalechat.com";
+const grievanceEmail = "support@skalechat.com";
 
 export default function TermsPage() {
   return (
