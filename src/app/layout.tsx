@@ -4,6 +4,8 @@ import "./globals.css";
 import { SiteNav } from "@/components/site-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { JsonLd } from "@/components/json-ld";
+import { siteGraph } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 const poppins = Poppins({
@@ -91,39 +93,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${site.websiteUrl}/#organization`,
-      name: site.name,
-      legalName: site.legalName,
-      url: site.websiteUrl,
-      logo: `${site.websiteUrl}/brand/icon.png`,
-      email: site.email,
-      telephone: site.phoneDisplay,
-      description: site.description,
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${site.websiteUrl}/#website`,
-      name: site.name,
-      url: site.websiteUrl,
-      publisher: { "@id": `${site.websiteUrl}/#organization` },
-      inLanguage: "en",
-    },
-  ],
-};
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col bg-bg font-sans text-ink">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={siteGraph} />
         <ScrollProgress />
         <SiteNav />
         <main className="flex-1">{children}</main>

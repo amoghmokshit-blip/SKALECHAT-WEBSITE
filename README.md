@@ -1,6 +1,6 @@
-# ScaleChat — Company Website
+# SkaleChat — Company Website
 
-Marketing website for **ScaleChat**, a private group messaging platform for
+Marketing website for **SkaleChat**, a private group messaging platform for
 intermediaries. Parties communicate while their contact information stays hidden
 — only the admin sees real identities.
 

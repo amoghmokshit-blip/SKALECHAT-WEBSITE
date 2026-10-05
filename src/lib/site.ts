@@ -9,8 +9,10 @@ export const site = {
   email: "support@skalechat.com",
   phone: "9815784080",
   phoneDisplay: "+91 98157 84080",
-  website: "slaychatapp.com",
-  websiteUrl: "https://slaychatapp.com",
+  // Canonical production domain. Any other domain the company owns
+  // (e.g. slaychatapp.com) should 301-redirect here at the DNS/host level.
+  website: "skalechat.com",
+  websiteUrl: "https://skalechat.com",
   // App store links — replace "#" with the real listing URLs once published.
   appStoreUrl: "#",
   playStoreUrl: "#",
@@ -20,7 +22,9 @@ export const site = {
 
 export const nav = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/product", label: "Product" },
+  { href: "/features", label: "Features" },
+  { href: "/super-groups", label: "Super Groups" },
+  { href: "/security", label: "Security" },
+  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ] as const;

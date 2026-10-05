@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { PageHeader } from "@/components/page-header";
 import { Reveal } from "@/components/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbList } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
-  title: "About",
+  title: "About SkaleChat",
   description:
-    "SkaleChat is built by SKALECHAT COMMUNICATIONS PRIVATE LIMITED — a company focused on private, intermediated communication.",
+    "SkaleChat is built by SKALECHAT COMMUNICATIONS PRIVATE LIMITED — a company focused on private, intermediated communication for agents, recruiters and consultants.",
 };
 
 const sections = [
@@ -38,6 +40,12 @@ const sections = [
 export default function AboutPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
       <PageHeader
         eyebrow="About"
         title="Built for the people who make deals happen."

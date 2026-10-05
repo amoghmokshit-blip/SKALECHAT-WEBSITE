@@ -1,8 +1,25 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/container";
 import { Button } from "@/components/button";
 import { SuperGroupPanel } from "@/components/super-group-panel";
 import { StoreBadges } from "@/components/store-badges";
 import { Reveal } from "@/components/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { FaqSection } from "@/components/faq-section";
+import { softwareApplicationNode, faqPage } from "@/lib/schema";
+
+export const metadata: Metadata = {
+  // Absolute title bypasses the "%s — SkaleChat" template so the brand
+  // isn't repeated. Tuned for search intent without keyword stuffing.
+  title: {
+    absolute:
+      "SkaleChat — Private Group Messaging App for Agents & Intermediaries",
+  },
+  description:
+    "SkaleChat is a private group messaging app for brokers, recruiters and consultants. Host a Super Group where everyone talks in one place — phone numbers stay hidden and only the admin sees who's who.",
+  alternates: { canonical: "/" },
+};
 
 const features = [
   {
@@ -19,9 +36,40 @@ const features = [
   },
 ];
 
+// Shared by the visible FAQ section and the FAQPage schema below — the answers
+// must stay identical in both so the structured data matches the page.
+const faqs = [
+  {
+    q: "What is SkaleChat?",
+    a: "SkaleChat is a private group messaging app built for intermediaries — agents, brokers, recruiters and consultants. It lets you host a Super Group where everyone talks in one place while phone numbers stay hidden and only the admin sees who's who.",
+  },
+  {
+    q: "What is a Super Group?",
+    a: "A Super Group is a managed space where an admin brings several parties together into a single conversation. Members take part under aliases, cannot see each other's phone numbers and cannot message one another directly.",
+  },
+  {
+    q: "How does SkaleChat keep phone numbers private?",
+    a: "Members see aliases instead of real names or numbers, and contact details are never exchanged inside the group. Only the admin can see the real identities of members, so the introduction stays with the person who made it.",
+  },
+  {
+    q: "Is SkaleChat end-to-end encrypted?",
+    a: "Yes. Conversations in SkaleChat are end-to-end encrypted, so message content stays private between the people in the group.",
+  },
+  {
+    q: "Who is SkaleChat for?",
+    a: "SkaleChat is designed for the people who connect others: real estate and travel agents, recruiters, marketplace operators, consultants and community builders who need parties to collaborate without giving away the relationships they've built.",
+  },
+  {
+    q: "How much does SkaleChat cost?",
+    a: "Admins pay to host a Super Group; members join for free. SkaleChat is available on Android and iOS.",
+  },
+];
+
 export default function Home() {
   return (
     <>
+      <JsonLd data={softwareApplicationNode} />
+      <JsonLd data={faqPage(faqs)} />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-line">
         <div aria-hidden className="pointer-events-none absolute inset-0">
@@ -74,7 +122,13 @@ export default function Home() {
             </h1>
             <p className="rise rise-2 mt-6 max-w-xl text-lg leading-8 text-muted">
               SkaleChat is a messaging app for the people who connect others —
-              agents, brokers, recruiters and consultants. Host a Super Group
+              agents, brokers, recruiters and consultants. Host a{" "}
+              <Link
+                href="/super-groups"
+                className="text-ink underline decoration-line underline-offset-2 transition-colors hover:decoration-accent"
+              >
+                Super Group
+              </Link>{" "}
               where everyone talks in one place, while phone numbers stay hidden
               and only you see who&rsquo;s who.
             </p>
@@ -133,8 +187,21 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+          <Reveal>
+            <div className="mt-10 text-center">
+              <Link
+                href="/features"
+                className="text-sm font-semibold text-accent underline-offset-4 hover:underline"
+              >
+                Explore all features →
+              </Link>
+            </div>
+          </Reveal>
         </Container>
       </section>
+
+      {/* FAQ */}
+      <FaqSection faqs={faqs} />
 
       {/* CTA */}
       <section className="border-t border-line bg-subtle">
