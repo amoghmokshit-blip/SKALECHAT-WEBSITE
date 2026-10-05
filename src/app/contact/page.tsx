@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import { Container } from "@/components/container";
 import { PageHeader } from "@/components/page-header";
 import { Button } from "@/components/button";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbList } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
-  title: "Contact",
-  description: `Contact ${site.name} — email, phone and registered company details.`,
+  title: "Contact SkaleChat",
+  description: `Contact ${site.name} — email, phone and registered company details. Questions about the app or setting up a Super Group? We're happy to help.`,
 };
 
 const rows = [
@@ -31,6 +33,12 @@ const rows = [
 export default function ContactPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
       <PageHeader
         eyebrow="Contact"
         title="Get in touch."

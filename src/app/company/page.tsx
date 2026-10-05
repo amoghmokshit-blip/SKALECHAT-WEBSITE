@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/container";
 import { PageHeader } from "@/components/page-header";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbList } from "@/lib/schema";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/company" },
-  title: "Company",
-  description: `Company information for ${site.legalName}.`,
+  title: "Company Information",
+  description: `Registered company information for ${site.legalName}, the company behind SkaleChat — legal name, CIN and company type.`,
 };
 
 const rows = [
@@ -19,6 +21,12 @@ const rows = [
 export default function CompanyPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Company", path: "/company" },
+        ])}
+      />
       <PageHeader eyebrow="Company" title="Company information" />
 
       <section>

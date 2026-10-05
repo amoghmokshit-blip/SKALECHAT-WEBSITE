@@ -1,21 +1,30 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/container";
 import { PageHeader } from "@/components/page-header";
 import { Workflow } from "@/components/workflow";
 import { SuperGroupPanel } from "@/components/super-group-panel";
 import { Button } from "@/components/button";
 import { Reveal } from "@/components/reveal";
+import { JsonLd } from "@/components/json-ld";
+import { breadcrumbList } from "@/lib/schema";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/product" },
-  title: "Product",
+  title: "How SkaleChat Works — Product Tour",
   description:
-    "The Super Group: private group communication built for intermediated conversations, where identities and contact details stay hidden.",
+    "A quick tour of SkaleChat: how a Super Group brings parties into one conversation, and the four steps from introduction to a private, controlled chat.",
 };
 
 export default function ProductPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbList([
+          { name: "Home", path: "/" },
+          { name: "Product", path: "/product" },
+        ])}
+      />
       <PageHeader
         eyebrow="Product"
         title="SkaleChat"
@@ -45,7 +54,28 @@ export default function ProductPage() {
                 the room and what each member can see.
               </p>
               <p className="text-faint">
-                Admins pay for the group; members join free.
+                Admins pay for the group; members join free — see{" "}
+                <Link
+                  href="/pricing"
+                  className="text-accent underline underline-offset-2 hover:text-accent-dark"
+                >
+                  pricing
+                </Link>
+                . Read more about{" "}
+                <Link
+                  href="/super-groups"
+                  className="text-accent underline underline-offset-2 hover:text-accent-dark"
+                >
+                  Super Groups
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/security"
+                  className="text-accent underline underline-offset-2 hover:text-accent-dark"
+                >
+                  security
+                </Link>
+                .
               </p>
             </div>
           </Reveal>

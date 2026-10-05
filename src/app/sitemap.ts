@@ -8,10 +8,14 @@ const routes: {
   priority: number;
 }[] = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
-  { path: "/product", changeFrequency: "monthly", priority: 0.9 },
-  { path: "/about", changeFrequency: "monthly", priority: 0.8 },
-  { path: "/company", changeFrequency: "yearly", priority: 0.6 },
+  { path: "/super-groups", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/features", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/security", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/product", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/about", changeFrequency: "monthly", priority: 0.7 },
   { path: "/contact", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/company", changeFrequency: "yearly", priority: 0.6 },
   { path: "/privacy", changeFrequency: "yearly", priority: 0.4 },
   { path: "/terms", changeFrequency: "yearly", priority: 0.4 },
 ];
