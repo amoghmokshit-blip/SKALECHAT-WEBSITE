@@ -15,6 +15,16 @@ const poppins = Poppins({
   display: "swap",
 });
 
+// Search-engine verification codes. These render a <meta> tag ONLY when the
+// matching env var is set, so no empty or placeholder tags ship by accident.
+// Get the Google code from Search Console and the Bing code from Webmaster Tools.
+const verification = {
+  google: process.env.GOOGLE_SITE_VERIFICATION,
+  other: process.env.BING_SITE_VERIFICATION
+    ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+    : undefined,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.websiteUrl),
   title: {
@@ -23,6 +33,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  referrer: "origin-when-cross-origin",
   keywords: [
     "SkaleChat",
     "group chat",
@@ -52,6 +63,11 @@ export const metadata: Metadata = {
     apple: "/brand/icon.png",
   },
   manifest: "/manifest.webmanifest",
+  appleWebApp: {
+    capable: true,
+    title: site.name,
+    statusBarStyle: "default",
+  },
   openGraph: {
     title: `${site.name} — ${site.tagline}`,
     description: site.description,
@@ -84,6 +100,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
       "max-video-preview": -1,
     },
+  },
+  verification,
+  other: {
+    "msapplication-TileColor": "#ffffff",
   },
 };
 
