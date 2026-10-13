@@ -24,7 +24,7 @@ export function Logo({
           className="logo-glow absolute inset-0 rounded-[30%] bg-accent/30 blur-md"
         />
         <Image
-          src="/brand/splash-badge.png"
+          src="/brand/logo-mark.png"
           alt=""
           width={markSize}
           height={markSize}
