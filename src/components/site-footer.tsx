@@ -45,7 +45,7 @@ export function SiteFooter() {
               aria-label="SkaleChat home"
             >
               <Image
-                src="/brand/splash-badge.png"
+                src="/brand/logo-mark.png"
                 alt=""
                 width={34}
                 height={34}
