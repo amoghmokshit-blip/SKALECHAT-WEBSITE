@@ -152,9 +152,11 @@ export default function PrivacyPage() {
               prompt. If you allow it, the phone numbers in your contacts are
               sent to our servers over an encrypted connection only to find which
               of your contacts already use SkaleChat. Numbers of people who do not
-              use SkaleChat are not stored. For contacts who do use SkaleChat, we
-              store their name and number in your own contact list so the app can
-              show them. We do not upload other contact fields such as email
+              use SkaleChat are not stored by this check. For contacts who do use
+              SkaleChat, we store their name and number in your own contact list so
+              the app can show them. If you add a contact yourself in the app, we
+              store the name and number you enter in your contact list, even if
+              that person does not use SkaleChat yet. We do not upload other contact fields such as email
               addresses, postal addresses or photos. Contacts information is not
               sold, is not shared with third parties and is not sent to any AI
               service. Your contact list is deleted when you delete your account.
@@ -340,8 +342,10 @@ export default function PrivacyPage() {
               network); LiveKit (voice and video calls); Twilio (SMS
               verification); Google Firebase and Apple Push Notification service
               (notifications and crash reports); OpenRouter, Inc. and Google
-              (the optional AI assistant, see Section 6); and Apple App Store and
-              Google Play (payments).
+              (the optional AI assistant, see Section 6); Apple App Store and
+              Google Play (payments); and GIPHY and jsDelivr, from which the app
+              loads GIFs and stickers you choose to send (these services receive
+              your device&rsquo;s IP address when the image loads).
             </p>
             <p>
               Each third party we share personal data with, including the AI
@@ -375,6 +379,11 @@ export default function PrivacyPage() {
               by the user.
             </p>
             <p>
+              Messages you sent before deleting your account stay in the chats of
+              the people you sent them to, shown as from a &ldquo;Deleted
+              account&rdquo;. Your profile, contact list and media are deleted.
+            </p>
+            <p>
               11.3. Account data will ordinarily be retained for 30 days following
               account deletion, after which it will be deleted, except to the
               extent retention is required by applicable law or reasonably
@@ -386,8 +395,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               11.5. Residual copies of deleted content within encrypted backups
-              are automatically overwritten within [backup retention period to be
-              confirmed]. Security and audit logs may be retained for longer where
+              are automatically overwritten within 30 days. Security and audit logs may be retained for longer where
               required for legal, security or fraud-prevention purposes. Content
               that a Super Group Administrator exported or downloaded before
               deletion cannot be recovered or deleted by SkaleChat.
