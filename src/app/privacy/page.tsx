@@ -344,6 +344,13 @@ export default function PrivacyPage() {
               Google Play (payments).
             </p>
             <p>
+              Each third party we share personal data with, including the AI
+              service providers in Section 6, is bound by contract or by its
+              published terms to protect that data with the same or equal
+              protection as described in this Privacy Policy, and to use it only
+              to provide its service to SkaleChat.
+            </p>
+            <p>
               Service providers processing personal data on SkaleChat&rsquo;s
               behalf will be required to process such information consistently
               with applicable contractual and legal obligations.

@@ -300,19 +300,30 @@ export default function TermsPage() {
               8.4. Moderation does not amount to an undertaking by SkaleChat to
               monitor every communication transmitted through the Platform.
             </p>
+            <p>
+              8.5. SkaleChat has no tolerance for objectionable content or abusive
+              users. Objectionable content includes harassment, hate speech,
+              threats, sexual content involving minors, and content that is
+              unlawful or that violates Section 7. Users can report a message, a
+              user or a group, and can block any user, from within the app.
+              SkaleChat reviews reports and acts on them within 24 hours, which may
+              include removing the content and suspending or terminating the
+              account responsible.
+            </p>
 
             <h2>9. Artificial Intelligence Features</h2>
             <p>
-              9.1. SkaleChat may provide artificial intelligence-assisted
-              features. Where enabled, these may process messages or other group
-              content for purposes including identifying potential policy
-              violations, identifying possible attempts to bypass an
-              Administrator, preparing summaries or generating notes.
+              9.1. SkaleChat offers an optional AI assistant (&ldquo;Slay AI&rdquo;)
+              to Super Group Administrators, which summarises recent group
+              conversation and answers the Administrator&rsquo;s questions.
             </p>
             <p>
-              9.2. The availability and operation of such features may depend upon
-              applicable settings, permissions and disclosures presented within
-              the Platform.
+              9.2. Before Slay AI is used for the first time, the app explains what
+              will be sent (the group&rsquo;s recent messages, shown by member
+              alias only, and the Administrator&rsquo;s question) and to whom
+              (OpenRouter, Inc., which processes it using Google&rsquo;s Gemini AI
+              model), and asks the Administrator for permission. Nothing is sent
+              unless the Administrator agrees. See Section 6 of the Privacy Policy.
             </p>
             <p>
               9.3. AI-generated outputs may contain errors and must not be treated
