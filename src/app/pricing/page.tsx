@@ -24,7 +24,7 @@ const plans = [
       "Join any Super Group you're invited to",
       "Take part under a private alias",
       "Your phone number stays hidden",
-      "End-to-end encrypted conversations",
+      "Encrypted conversations",
     ],
     cta: { label: "Get the app", href: "/contact" },
     highlight: false,

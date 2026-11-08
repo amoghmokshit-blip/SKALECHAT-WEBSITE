@@ -161,12 +161,12 @@ export default function SuperGroupsPage() {
           </div>
           <Reveal>
             <p className="mt-8 text-sm text-muted">
-              Message content is{" "}
+              Messages are{" "}
               <Link
                 href="/security"
                 className="text-accent underline underline-offset-2 hover:text-accent-dark"
               >
-                end-to-end encrypted
+                encrypted in transit and on our servers
               </Link>{" "}
               — privacy is built into every group.
             </p>

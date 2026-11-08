@@ -25,7 +25,7 @@ const sections = [
     paragraphs: [
       "A messaging platform for real estate and travel agents, recruiters, marketplace operators, consultants and community builders — the people who bring parties together and need them to collaborate in one place.",
       "Members work under aliases. Contact details stay private. The admin keeps full visibility and control.",
-      "Conversations are end-to-end encrypted, and SkaleChat is built India-first.",
+      "Messages are encrypted in transit and on our servers, and SkaleChat is built India-first.",
     ],
   },
   {

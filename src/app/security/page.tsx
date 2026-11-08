@@ -12,13 +12,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/security" },
   title: "Security & Privacy — How SkaleChat Protects Your Contacts",
   description:
-    "How SkaleChat keeps conversations private: end-to-end encrypted messages, hidden phone numbers, alias identities, admin-controlled visibility and a DPDP-aligned Privacy Policy.",
+    "How SkaleChat keeps conversations private: encrypted messages, hidden phone numbers, alias identities, admin-controlled visibility and a DPDP-aligned Privacy Policy.",
 };
 
 const pillars = [
   {
-    title: "End-to-end encryption",
-    body: "Message content is end-to-end encrypted, so conversations stay private between the people in the group and can't be read by SkaleChat's servers in transit.",
+    title: "Encrypted in transit and at rest",
+    body: "Messages are encrypted while they travel and while stored on our servers. SkaleChat does not currently offer end-to-end encryption, so our systems can access message content where a feature needs it, as our Privacy Policy explains.",
   },
   {
     title: "Hidden phone numbers",
@@ -45,7 +45,7 @@ const pillars = [
 const faqs: Faq[] = [
   {
     q: "Can SkaleChat read my messages?",
-    a: "Message content is end-to-end encrypted, so it isn't readable by SkaleChat's servers in transit. Conversations stay between the people in the group.",
+    a: "Messages are encrypted in transit and on our servers, but SkaleChat does not currently offer end-to-end encryption, so our systems can access message content where a feature needs it (for example moderation of reported messages, or the optional AI assistant when a Super Group admin turns it on). See our Privacy Policy for details.",
   },
   {
     q: "Who can see my phone number on SkaleChat?",

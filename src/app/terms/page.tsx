@@ -21,7 +21,7 @@ export default function TermsPage() {
       <section>
         <Container className="py-16 md:py-20">
           <p className="mb-10 text-sm text-faint">
-            Effective date: [To be finalized]
+            Effective date: 8 November 2026
           </p>
 
           <Prose>

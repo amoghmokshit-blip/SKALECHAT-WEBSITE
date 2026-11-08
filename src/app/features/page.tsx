@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/features" },
   title: "SkaleChat Features — Private Group Messaging for Intermediaries",
   description:
-    "Explore SkaleChat's features: Super Groups, private aliases, hidden phone numbers, admin-only identity visibility, no cross-member DMs and end-to-end encryption.",
+    "Explore SkaleChat's features: Super Groups, private aliases, hidden phone numbers, admin-only identity visibility, no cross-member DMs and encrypted messaging.",
 };
 
 const features = [
@@ -44,8 +44,8 @@ const features = [
     body: "Members join by invitation. No one browses a member list or discovers who else is in the room.",
   },
   {
-    title: "End-to-end encryption",
-    body: "Message content is end-to-end encrypted, so conversations stay private between the people in the group.",
+    title: "Encrypted messaging",
+    body: "Messages are encrypted in transit and on our servers.",
     href: "/security",
     linkLabel: "About our security",
   },

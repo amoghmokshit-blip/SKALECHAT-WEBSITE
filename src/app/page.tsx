@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Is SkaleChat end-to-end encrypted?",
-    a: "Yes. Conversations in SkaleChat are end-to-end encrypted, so message content stays private between the people in the group.",
+    a: "Not yet. Messages are encrypted in transit and on our servers, and SkaleChat does not currently offer end-to-end encryption. Phone numbers and real identities stay hidden from other members.",
   },
   {
     q: "Who is SkaleChat for?",
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <StoreBadges className="rise rise-4 mt-6" />
             <p className="rise rise-4 mt-6 text-sm text-faint">
-              End-to-end encrypted · India-first · Admins pay, members free
+              Hidden phone numbers · India-first · Admins pay, members free
             </p>
           </div>
           <div className="rise rise-4 flex min-w-0 justify-center md:justify-end">

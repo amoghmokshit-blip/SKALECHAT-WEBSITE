@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <section>
         <Container className="py-16 md:py-20">
           <p className="mb-10 text-sm text-faint">
-            Effective date: [To be finalized]
+            Effective date: 8 November 2026
           </p>
 
           <Prose>
@@ -146,6 +146,21 @@ export default function PrivacyPage() {
               although disabling a permission may prevent the corresponding
               feature from functioning.
             </p>
+            <p>
+              <strong>Contacts.</strong> Access to your device contacts is
+              optional and is requested with your device&rsquo;s permission
+              prompt. If you allow it, the phone numbers in your contacts are
+              sent to our servers over an encrypted connection only to find which
+              of your contacts already use SkaleChat. Numbers of people who do not
+              use SkaleChat are not stored. For contacts who do use SkaleChat, we
+              store their name and number in your own contact list so the app can
+              show them. We do not upload other contact fields such as email
+              addresses, postal addresses or photos. Contacts information is not
+              sold, is not shared with third parties and is not sent to any AI
+              service. Your contact list is deleted when you delete your account.
+              If you do not allow access, you can still start chats by entering a
+              phone number.
+            </p>
 
             <h2>3. How We Use Personal Data</h2>
             <p>We may process personal data to:</p>
@@ -231,24 +246,28 @@ export default function PrivacyPage() {
 
             <h2>6. Artificial Intelligence Processing</h2>
             <p>
-              Where an AI feature is enabled, messages or other group content may
-              be processed to provide functionality including:
+              SkaleChat offers an optional AI assistant (&ldquo;Slay AI&rdquo;) to
+              Super Group Administrators. It summarises recent group
+              conversation and answers the Administrator&rsquo;s questions.
             </p>
-            <ul>
-              <li>(a) detecting potential violations of Platform policies;</li>
-              <li>
-                (b) identifying potential attempts to circumvent or bypass an
-                Administrator;
-              </li>
-              <li>(c) generating summaries; and</li>
-              <li>(d) generating notes.</li>
-            </ul>
             <p>
-              AI-assisted features are provided using [AI provider to be
-              confirmed]. Where such processing involves an external provider,
-              relevant content may be shared with that provider solely to the
-              extent necessary to deliver the feature, and subject to applicable
-              contractual and legal obligations.
+              <strong>What is sent and to whom.</strong> When an Administrator
+              uses Slay AI, the group&rsquo;s recent messages (shown by member
+              alias only, never real names or phone numbers) and the
+              Administrator&rsquo;s question are sent to OpenRouter, Inc., which
+              processes them using Google&rsquo;s Gemini AI model. The question
+              may also be used to search the web to answer it.
+            </p>
+            <p>
+              <strong>Permission first.</strong> Before Slay AI is used for the
+              first time, the app explains what will be sent and to whom, and asks
+              the Administrator for permission. Nothing is sent unless the
+              Administrator agrees. The data is used only to produce the summary
+              or answer, and SkaleChat does not store the AI&rsquo;s answers.
+            </p>
+            <p>
+              No other SkaleChat feature sends personal data to a third-party AI
+              service. Contacts information is never sent to an AI service.
             </p>
 
             <h2>7. Analytics, Diagnostics, Advertising and Tracking</h2>
@@ -256,8 +275,7 @@ export default function PrivacyPage() {
               SkaleChat may use analytics and diagnostic technologies to
               understand application usage, identify crashes and technical
               problems, monitor performance and improve the Platform. These
-              presently include [analytics and diagnostics providers to be
-              confirmed]. SkaleChat does not currently serve third-party
+              presently include Google Firebase Crashlytics. SkaleChat does not currently serve third-party
               advertising.
             </p>
             <p>
@@ -299,7 +317,11 @@ export default function PrivacyPage() {
               <li>(a) cloud infrastructure and hosting providers;</li>
               <li>(b) analytics and diagnostic providers;</li>
               <li>(c) payment and app-store providers;</li>
-              <li>(d) AI service providers, where applicable;</li>
+              <li>
+                (d) AI service providers, only for the optional AI assistant
+                and only with the Administrator&rsquo;s permission (see Section
+                6);
+              </li>
               <li>(e) professional advisers where reasonably necessary;</li>
               <li>
                 (f) competent governmental, regulatory, judicial or
@@ -313,6 +335,15 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p>
+              The service providers we currently use are: Fly.io (hosting);
+              Neon (database); Upstash (cache); Cloudflare (media storage and
+              network); LiveKit (voice and video calls); Twilio (SMS
+              verification); Google Firebase and Apple Push Notification service
+              (notifications and crash reports); OpenRouter, Inc. and Google
+              (the optional AI assistant, see Section 6); and Apple App Store and
+              Google Play (payments).
+            </p>
+            <p>
               Service providers processing personal data on SkaleChat&rsquo;s
               behalf will be required to process such information consistently
               with applicable contractual and legal obligations.
@@ -321,8 +352,7 @@ export default function PrivacyPage() {
             <h2>10. Hosting and International Processing</h2>
             <p>
               Personal data is primarily hosted on cloud servers located in
-              [hosting region to be confirmed]. Depending upon the confirmed
-              server region and service providers used, personal data may be
+              Singapore. Depending upon the service providers used, personal data may be
               processed in a country other than the country in which you reside,
               subject to applicable legal requirements.
             </p>
